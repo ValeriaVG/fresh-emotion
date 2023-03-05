@@ -1,10 +1,7 @@
 {
-    "tasks": {
-    },
-    "importMap": "./import_map.json",
     "compilerOptions": {
       "jsx": "react-jsx",
       "jsxImportSource": "preact",
       "lib": ["deno.window","dom"]
     }
-  }
+}

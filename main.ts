@@ -6,12 +6,21 @@ export default function (state: string[]) {
     el.id = cache.key;
     document.head.appendChild(el);
   }
-  el.innerText = "";
+
   hydrate(state);
+  el.innerText = "";
   for (const key in cache.inserted) {
     const entry = cache.inserted[key];
     if (entry !== true) {
       el.innerText += entry;
     }
   }
+
+  // Override inserts to handle dynamic styles
+  const originalInsert = cache.insert;
+  cache.insert = (...params) => {
+    const result = originalInsert(...params);
+    if (el) el.innerText += cache.inserted[params[1].name];
+    return result;
+  };
 }
