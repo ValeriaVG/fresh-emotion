@@ -1,4 +1,4 @@
-import { Plugin, PluginRenderScripts } from "$fresh/server.ts";
+import type { Plugin, PluginRenderScripts } from "https://deno.land/x/fresh@1.1.3/server.ts";
 import createEmotionServer from "https://esm.sh/@emotion/server@11.10.0/create-instance";
 import { cache } from "https://esm.sh/@emotion/css@11.10.5";
 
