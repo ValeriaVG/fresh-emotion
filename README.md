@@ -3,12 +3,14 @@
 This plugin allows use of CSS-in-JS library [emotion](https://emotion.sh/)
 within [fresh](https://fresh.deno.dev/) framework.
 
+Can be used from within islands and supports frontend hydration of styles.
+
 ## How to use
 
 Add plugin to `main.ts`:
 
 ```ts
-import emotion from "https://raw.githubusercontent.com/en-di/fresh-emotion/main/plugin.ts";
+import emotion from "https://deno.land/x/fresh_emotion_css/plugin.ts";
 
 await start(manifest, {
   plugins: [emotion()],
