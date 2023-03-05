@@ -10,7 +10,7 @@ Can be used from within islands and supports frontend hydration of styles.
 Add plugin to `main.ts`:
 
 ```ts
-import emotion from "https://deno.land/x/fresh_emotion_css/plugin.ts";
+import emotion from "https://deno.land/x/fresh_emotioncss/plugin.ts";
 
 await start(manifest, {
   plugins: [emotion()],
